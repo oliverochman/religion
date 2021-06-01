@@ -1,6 +1,6 @@
 import 'semantic-ui-css/semantic.min.css'
 import Posts from './Components/Posts'
-import Header from './Components/Header'
+import Sidebar from './Components/Sidebar'
 import Home from './Components/Home'
 import OnlineResources from './Components/OnlineResources'
 import Books from './Components/Books'
@@ -10,16 +10,19 @@ import {
   Route,
   Link
 } from "react-router-dom";
-import { Grid, Menu, Segment } from 'semantic-ui-react'
+import { Grid, Header } from 'semantic-ui-react'
 
 
 const App = () => {
   return (
     <>
       <Router>
+        <Header as='h2' icon textAlign='center'>
+          <Header.Content>What is out there</Header.Content>
+        </Header>
         <Grid>
           <Grid.Column width={4}>
-            <Header />
+            <Sidebar />
           </Grid.Column>
 
           <Grid.Column stretched width={12}>
