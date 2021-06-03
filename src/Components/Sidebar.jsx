@@ -8,7 +8,7 @@ import AboutMe from './AboutMe'
 
 const Sidebar = () => {
   const contextRef = createRef()
-  const [activeItem, setActiveItem] = useState('home')
+  const [activeItem, setActiveItem] = useState('posts')
 
   return (
     <>
@@ -18,21 +18,12 @@ const Sidebar = () => {
             <Divider section>
               <Menu fluid vertical tabular>
                 <Menu.Item
-                  active={activeItem === 'home'}
-                  onClick={() => setActiveItem('home')}
+                  active={activeItem === 'posts'}
+                  onClick={() => setActiveItem('posts')}
                   as={Link}
                   to="/"
                 >
-                  Home
-        </Menu.Item>
-
-                <Menu.Item
-                  active={activeItem === 'books'}
-                  onClick={() => setActiveItem('books')}
-                  as={Link}
-                  to="/books"
-                >
-                  Books
+                  Posts
         </Menu.Item>
 
                 <Menu.Item
@@ -44,14 +35,7 @@ const Sidebar = () => {
                   Online resources
         </Menu.Item>
 
-                <Menu.Item
-                  active={activeItem === 'posts'}
-                  onClick={() => setActiveItem('posts')}
-                  as={Link}
-                  to="/posts"
-                >
-                  Posts
-        </Menu.Item>
+
                 <Divider section />
               </Menu>
               <AboutMe />
