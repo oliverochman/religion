@@ -1,5 +1,5 @@
 import React from 'react'
-import { Image, Segment, Divider, Header, Container } from 'semantic-ui-react'
+import { Segment, Divider, Container } from 'semantic-ui-react'
 
 const AboutMe = () => {
   return (
