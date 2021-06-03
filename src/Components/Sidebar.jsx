@@ -7,6 +7,7 @@ import AboutMe from './AboutMe'
 
 
 const Sidebar = () => {
+  const [activeItem, setActiveItem] = useState('posts')
 
   return (
     <>
@@ -19,7 +20,7 @@ const Sidebar = () => {
             to="/"
           >
             Posts
-        </Menu.Item>
+          </Menu.Item>
 
           <Menu.Item
             active={activeItem === 'online-resources'}
@@ -28,14 +29,13 @@ const Sidebar = () => {
             to="/online-resources"
           >
             Online resources
-        </Menu.Item>
+          </Menu.Item>
 
 
           <Divider section />
         </Menu>
         <AboutMe />
       </Divider>
-
     </>
   )
 }
